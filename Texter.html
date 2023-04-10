@@ -1,0 +1,165 @@
+<DOCTYPE! html>
+    <html>
+        <head>
+            <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+            <link rel="stylesheet" href="Html/styles.css">
+            <link rel="stylesheet" href="w3.css">
+            <script src='file:///android_asset/app.js'></script>
+            <script src="Html/all.min.js"></script>
+            <script src="settingsView.js"></script>
+            <script src="contactsView.js"></script>
+            <script src="EditContactView.js"></script>
+            <script src="messageView.js"></script>
+            <script src="signView.js"></script>
+            <script src="accountView.js"></script>
+            <script src="simple.js"></script>
+            <script src="alert.js"></script>
+        </head>
+        <body>
+            <section id="home" class="page w3-animate-left">
+                <footer class="bar padding-8 top color-theme">
+                    <span>Home</span>
+                </footer>
+                <section class="margin-64 w3-padding-large">
+                   <div class=""></div>
+                    <div class="w3-card w3-round w3-padding w3-margin">
+                        <p>
+                            Become a sale manager! Simply convince businesses to use this app and share in our profit
+                        </p>
+                        <button class="w3-btn w3-green shadow w3-round">Join</button>
+                    </div>
+                    <div class="w3-card w3-padding w3-round w3-margin">
+                        <p>Some of your contact's don't have birthday info</p>
+                        <button class="w3-btn color-theme shadow w3-round page-switch" page="contacts">Edit</button>
+                    </div>
+                </section>
+            </section>
+            <section id="contacts" class="page w3-animate-left"></section>
+            <section id="messages" class="page w3-animate-left">
+                <div id="edt_message_layout" class="margin-64"></div>
+            </section>
+            <section id="settings" class="page w3-animate-left">
+                <header class="bar padding-8 top color-theme">
+                    <span>Settings</span>
+                </header>
+                <section class="padding-8 margin-64">
+                    <form id="form">
+                        <div class="row">
+                            <label class="col-4">Name:</label>
+                            <input id="name" type="text" class="col input">
+                        </div>
+                        <div class="row">
+                            <label class="col-4" >Sender ID:</label>
+                            <input id="sender-id" type="text" class="col input">
+                        </div>
+                        <div class="row">
+                            <span class="col"></span>
+                            <span class="col"></span>
+                            <button class="btn col shadow w3-padding color-theme round">save</button>
+                        </div>
+                    </form>
+                    <div id="accountView">
+                        <div class="row">
+                            <label class="col">Account:</label>
+                            <span class="col naira" id="balance"></span>
+                            <button id="refill" class="btn shadow col color-theme round w3-padding">Refill</button>
+                        </div>
+                    </div>
+                </section>
+            </section>
+            <section id="about" class="page w3-animate-left">
+                <header class="bar padding-8 top color-theme">
+                    <span>About</span>
+                </header>
+                <section class="padding-16 margin-64">
+                    <p>
+                        Texter<br>
+                        Version: 0.0.1<br>
+                        By: VictoryTech Nig Ltd<br>
+                        <a href="#">website: http://www.victorytech.com.ng</a>
+                    </p>
+                </section>
+            </section>
+            <footer class="row bottom bar color-theme">
+                <div id="" class="col page-switch center" page="home">
+                    <span class="fas fa-home"></span>
+                    <span class="w3-small">Home</span>
+                </div>
+                <div id="" class="col page-switch center" page="contacts">
+                    <span class="fas fa-users"></span>
+                     <span class="w3-small">Contacts</span>
+                </div>
+                <div id="" class="col page-switch center" page="messages">
+                    <span class="fas fa-envelope"></span>
+                     <span class="w3-small">Message</span>
+                </div>
+                <div id="" class="col page-switch center" page="settings">
+                    <span class="fas fa-cog"></span>
+                     <span class="w3-small">Settings</span>
+                </div>
+                <div id="" class="col page-switch center" page="about">
+                    <span class="fas fa-info"></span>
+                     <span class="w3-small">About</span>
+                </div>
+            </footer>
+            <section id="flash" class="modal color-theme w3-animate-zoom">
+                <div class="modal-item" style="top:40%">
+                    <h2 class="center">Texter</h2>
+                    <div class="center">
+                        <span class="loader fa fa-cog circle"></span>
+                        <br>
+                        <span>Loading...</span>
+                    </div>
+                </div>
+            </section>
+            <section id="refillView" class="modal w3-animate-zoom padding-16 hide">
+                <div class="modal-item card padding white" style="top:20%">
+                    <div>
+                        <ul class="list">
+                            <li class="card padding-8 row">
+                                <label class="col">2000 SMS Units: </label>
+                                <span class="naira col">N6000</span>
+                                <button class="btn shadow color-theme round col padding" amount="6000">Buy</button>
+                            </li>
+                            <li class="card padding-8 row">
+                                <label class="col">1000 SMS Units: </label>
+                                <span class="naira col">N3000</span>
+                                <button class="btn shadow color-theme round col padding" amount="3000">Buy</button>
+                            </li>
+                            <li class="card padding-8 row">
+                                <label class="col">500 SMS Units: </label>
+                                <span class="naira col">N1,500</span>
+                                <button class="btn shadow color-theme round col padding" amount="1500">Buy</button>
+                            </li>
+                            <li class="card padding-8 row">
+                                <label class="col">200 SMS Units: </label>
+                                <span class="naira col">N600</span>
+                                <button class="btn shadow color-theme round col padding" amount="600">Buy</button>
+                            </li>
+                            <li class="card padding-8 row">
+                                <label class="col">100 SMS Units: </label>
+                                <span class="naira col">N350</span>
+                                <button class="btn shadow color-theme round col padding" amount="350">Buy</button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <section id="payView" class="modal w3-animate-zoom padding-16 hide">
+                <div class="modal-item white card" style="top:5%">
+                    <form id="form" class="padding-8">
+                       <p class="color-warning">Enter your account details then transfer the amount via mobile app or POSS to; <b>Bank Name: PAYCOM, Account Name: Musa Ibrahim, Account Number: 07087787772</b></p>
+                       <label>Bank Name:</label>
+                       <input type="text" id="bank_name" class="input" required >
+                       <label>Account Name:</label>
+                       <input type="text" id="account_name" class="input" required >
+                       <label>Account Number:</label>
+                       <input type="text" id="account_number" class="input" required >
+                       <button class="btn color-theme shadow round w3-padding">Recharge</button>
+                    </form>
+                </div>
+            </section>
+            
+            <script src="scripts.js"></script>
+        </body>
+    </html>
